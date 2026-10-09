@@ -1,0 +1,426 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de HTML - Aprende creando</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #243047;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #123b70;
+            color: white;
+            text-align: center;
+            padding: 35px 15px;
+        }
+
+        nav {
+            background: #08284d;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: white;
+            margin: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #71d7ff;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        section {
+            background: white;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+        }
+
+        h2 {
+            color: #1464a5;
+        }
+
+        pre {
+            background: #172033;
+            color: #b7f7d4;
+            padding: 15px;
+            overflow-x: auto;
+            border-radius: 8px;
+        }
+
+        .ejercicio {
+            background: #e4f4ff;
+            padding: 15px;
+            border-left: 5px solid #1684cf;
+        }
+
+        button {
+            background: #1464a5;
+            color: white;
+            padding: 10px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        input, textarea, select {
+            padding: 10px;
+            margin: 5px 0;
+            max-width: 100%;
+        }
+
+        footer {
+            background: #08284d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header id="inicio">
+    <h1>Curso de HTML: Aprende creando</h1>
+    <p>Un espacio para aprender desarrollo web desde cero</p>
+    <p><strong>Estudiante:</strong> juan carlos castillo cano </p>
+    <p><strong>Grado:</strong> 11°</p>
+</header>
+
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#texto">Texto</a>
+    <a href="#imagenes">Imágenes</a>
+    <a href="#listas">Listas y tablas</a>
+    <a href="#formularios">Formularios</a>
+    <a href="#multimedia">Multimedia</a>
+    <a href="#interactivos">Interactividad</a>
+    <a href="#ejercicios">Ejercicios</a>
+</nav>
+
+<main>
+
+<section>
+    <h2>Bienvenido al curso</h2>
+    <p>
+        HTML es un lenguaje de marcado que permite organizar
+        el contenido de las páginas web. Con sus etiquetas
+        podemos crear títulos, párrafos, imágenes, enlaces,
+        tablas, formularios y contenido multimedia.
+    </p>
+
+    <h3>Objetivo del curso</h3>
+    <p>
+        Comprender y utilizar las principales etiquetas HTML
+        mediante ejemplos y ejercicios prácticos para construir
+        páginas web sencillas e interactivas.
+    </p>
+</section>
+
+<section id="texto">
+    <h2>1. Texto, títulos y párrafos</h2>
+    <p>
+        Las etiquetas de texto permiten organizar la información.
+        Los títulos utilizan h1 hasta h6 y los párrafos utilizan p.
+    </p>
+
+    <pre><code>&lt;h1&gt;Mi página web&lt;/h1&gt;
+&lt;h2&gt;Mi primera unidad&lt;/h2&gt;
+&lt;p&gt;Estoy aprendiendo HTML.&lt;/p&gt;
+&lt;strong&gt;Texto importante&lt;/strong&gt;
+&lt;em&gt;Texto enfatizado&lt;/em&gt;</code></pre>
+
+    <h3>Resultado</h3>
+    <h1>Mi página web</h1>
+    <h2>Mi primera unidad</h2>
+    <p>Estoy aprendiendo HTML.</p>
+    <p><strong>Texto importante</strong></p>
+    <p><em>Texto enfatizado</em></p>
+
+    <div class="ejercicio">
+        <strong>Ejercicio:</strong>
+        Crea un título con tu nombre y un párrafo
+        que explique por qué quieres aprender HTML.
+    </div>
+</section>
+
+<section id="imagenes">
+    <h2>2. Imágenes y enlaces</h2>
+    <p>
+        La etiqueta img muestra imágenes y la etiqueta a
+        permite crear enlaces a otras páginas.
+    </p>
+
+    <pre><code>&lt;img src="paisaje.jpg"
+     alt="Un paisaje natural"&gt;
+
+&lt;a href="https://www.wikipedia.org/"&gt;
+    Visitar Wikipedia
+&lt;/a&gt;</code></pre>
+
+    <h3>Resultado</h3>
+    <p>Ejemplo de imagen:</p>
+    <img
+        src="https://placehold.co/600x200/1464a5/ffffff?text=Mi+imagen"
+        alt="Imagen de ejemplo para el curso">
+
+    <p>
+        <a href="https://www.wikipedia.org/" target="_blank"
+           rel="noopener noreferrer">Visitar Wikipedia</a>
+    </p>
+
+    <div class="ejercicio">
+        <strong>Ejercicio:</strong>
+        Inserta una imagen de tu tema favorito y crea
+        un enlace a una página educativa.
+    </div>
+</section>
+
+<section id="listas">
+    <h2>3. Listas y tablas</h2>
+    <p>
+        Las listas ordenadas usan ol, las listas sin orden usan ul
+        y cada elemento se escribe con li.
+        Las tablas utilizan table, tr, th y td.
+    </p>
+
+    <pre><code>&lt;ul&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Lenguaje&lt;/th&gt;
+        &lt;th&gt;Función&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;HTML&lt;/td&gt;
+        &lt;td&gt;Estructura&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+    <h3>Resultado: lista</h3>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <h3>Resultado: tabla</h3>
+    <table border="1" cellpadding="8">
+        <tr><th>Lenguaje</th><th>Función</th></tr>
+        <tr><td>HTML</td><td>Estructura</td></tr>
+        <tr><td>CSS</td><td>Diseño</td></tr>
+        <tr><td>JavaScript</td><td>Interactividad</td></tr>
+    </table>
+
+    <div class="ejercicio">
+        <strong>Ejercicio:</strong>
+        Elabora una lista con cinco materias escolares y una
+        tabla con tres lenguajes web y sus funciones.
+    </div>
+</section>
+
+<section id="formularios">
+    <h2>4. Formularios</h2>
+    <p>
+        Los formularios permiten recibir información del usuario.
+        Se utilizan etiquetas como form, label, input, select
+        y textarea.
+    </p>
+
+    <pre><code>&lt;form&gt;
+    &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+    &lt;input id="nombre" type="text"&gt;
+    &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+    <h3>Resultado</h3>
+    <form onSubmit="event.preventDefault(); alert('Formulario de ejemplo completado.');">
+        <label for="nombre">Escribe tu nombre:</label><br>
+        <input id="nombre" type="text" placeholder="Tu nombre" required>
+        <br>
+        <label for="tema">Tema favorito:</label><br>
+        <select id="tema">
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>JavaScript</option>
+        </select>
+        <br>
+        <button type="submit">Enviar respuesta</button>
+    </form>
+
+    <div class="ejercicio">
+        <strong>Ejercicio:</strong>
+        Crea un formulario que solicite el nombre, el correo
+        electrónico y el tema favorito del estudiante.
+    </div>
+</section>
+
+<section id="multimedia">
+    <h2>5. Videos y figuras</h2>
+    <p>
+        La etiqueta video permite incluir videos.
+        Las etiquetas figure y figcaption agrupan una imagen
+        con su descripción.
+    </p>
+
+    <pre><code>&lt;figure&gt;
+    &lt;img src="paisaje.jpg"
+         alt="Paisaje natural"&gt;
+    &lt;figcaption&gt;
+        Paisaje natural
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;video controls width="400"&gt;
+    &lt;source src="video.mp4"
+            type="video/mp4"&gt;
+    Tu navegador no admite este video.
+&lt;/video&gt;</code></pre>
+
+    <h3>Resultado: figura</h3>
+    <figure>
+        <img
+            src="https://placehold.co/500x180/287a54/ffffff?text=Paisaje+natural"
+            alt="Paisaje natural de ejemplo">
+        <figcaption>Figura 1. Ejemplo de imagen con descripción.</figcaption>
+    </figure>
+
+    <h3>Resultado: video</h3>
+    <video controls width="400">
+        Tu navegador no admite este video.
+    </video>
+    <p>Para visualizar un video, agrega un archivo llamado video.mp4 junto al HTML.</p>
+
+    <div class="ejercicio">
+        <strong>Ejercicio:</strong>
+        Inserta un video educativo y una imagen con su
+        respectiva descripción.
+    </div>
+</section>
+
+<section id="interactivos">
+    <h2>6. Elementos interactivos</h2>
+    <p>
+        HTML incluye elementos como button, details y summary.
+        Con JavaScript también podemos responder a las acciones
+        del usuario.
+    </p>
+
+    <pre><code>&lt;details&gt;
+    &lt;summary&gt;¿Qué es HTML?&lt;/summary&gt;
+    HTML organiza el contenido de una página web.
+&lt;/details&gt;
+
+&lt;button onclick="saludar()"&gt;
+    Presióname
+&lt;/button&gt;
+
+&lt;script&gt;
+function saludar() {
+    alert("¡Sigue aprendiendo HTML!");
+}
+&lt;/script&gt;</code></pre>
+
+    <h3>Resultado</h3>
+    <details>
+        <summary>¿Qué es HTML?</summary>
+        HTML organiza el contenido de una página web mediante etiquetas.
+    </details>
+
+    <p>
+        <button onclick="alert('¡Sigue aprendiendo HTML!')">
+            Presióname
+        </button>
+    </p>
+
+    <div class="ejercicio">
+        <strong>Ejercicio:</strong>
+        Crea un botón que muestre un mensaje y un elemento
+        desplegable que explique qué es CSS.
+    </div>
+</section>
+
+<section id="ejercicios">
+    <h2>7. Evaluación final</h2>
+    <p>Comprueba lo aprendido con estas preguntas.</p>
+
+    <form id="evaluacion">
+        <p>1. ¿Qué etiqueta se utiliza para crear un párrafo?</p>
+        <label><input type="radio" name="p1" value="a"> &lt;h1&gt;</label><br>
+        <label><input type="radio" name="p1" value="b"> &lt;p&gt;</label><br>
+        <label><input type="radio" name="p1" value="c"> &lt;img&gt;</label>
+
+        <p>2. ¿Qué etiqueta permite insertar una imagen?</p>
+        <label><input type="radio" name="p2" value="a"> &lt;img&gt;</label><br>
+        <label><input type="radio" name="p2" value="b"> &lt;table&gt;</label><br>
+        <label><input type="radio" name="p2" value="c"> &lt;ul&gt;</label>
+
+        <p>3. ¿Qué etiqueta crea un enlace?</p>
+        <label><input type="radio" name="p3" value="a"> &lt;video&gt;</label><br>
+        <label><input type="radio" name="p3" value="b"> &lt;form&gt;</label><br>
+        <label><input type="radio" name="p3" value="c"> &lt;a&gt;</label>
+
+        <p>
+            <button type="submit">Calificar respuestas</button>
+        </p>
+        <p id="resultado" aria-live="polite"></p>
+    </form>
+</section>
+
+</main>
+
+<footer>
+    <p>Curso de HTML: Aprende creando</p>
+    <p>Proyecto educativo de grado 11°</p>
+</footer>
+
+<script>
+document.getElementById("evaluacion").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const respuestas = {p1: "b", p2: "a", p3: "c"};
+    let puntos = 0;
+
+    for (const pregunta in respuestas) {
+        const seleccion = document.querySelector(
+            'input[name="' + pregunta + '"]:checked'
+        );
+
+        if (seleccion && seleccion.value === respuestas[pregunta]) {
+            puntos++;
+        }
+    }
+
+    document.getElementById("resultado").textContent =
+        "Obtuviste " + puntos + " de 3 respuestas correctas.";
+});
+</script>
+
+</body>
+</html>
